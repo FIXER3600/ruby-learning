@@ -12,7 +12,16 @@ loop do
 	opcao = gets.chomp.to_i
 	case opcao 
 	when 0
-		break
+		puts "Deseja de fato sair?"
+		puts "1 - Sim"
+		puts "2 - Não"
+		confirm=gets.chomp.to_i
+		if confirm == 1
+			exit(0)  
+		elsif confirm == 2
+		else
+			puts "Opção inválida! Digite 1 para sair ou 2 para continuar."
+		end
 	when 1
 		puts 'Digite o primeiro número: '
 		number1=gets.chomp.to_i
@@ -32,14 +41,14 @@ loop do
 		number1=gets.chomp.to_i
 		puts 'Digite o segundo número: '
 		number2=gets.chomp.to_i
-		mult=number1-number2
+		mult=number1*number2
 		result="Multiplicando #{number1} e #{number2}, tem-se #{mult} \n"
 	when 4
 		puts 'Digite o primeiro número: '
 		number1=gets.chomp.to_i
 		puts 'Digite o segundo número: '
 		number2=gets.chomp.to_i
-		div=number1-number2
+		div=number1/number2
 		result="Dividindo #{number1} e #{number2}, tem-se #{div} \n" 
 	else
 		result='Opção inválida! \n'
