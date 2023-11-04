@@ -2,7 +2,7 @@ result = ""
 
 loop do
 	print result
-	puts "Vamos calcular dois números!"
+	puts "\n Vamos calcular dois números!"
 	puts 'Digite aoperação que deseja fazer:'
 	puts "1 - Somar"
 	puts "2 - Subtrair"
@@ -17,7 +17,10 @@ loop do
 		puts "2 - Não"
 		confirm=gets.chomp.to_i
 		if confirm == 1
+			result='Foi bom ter voce aqui, tchau!'
+			puts result
 			exit(0)  
+
 		elsif confirm == 2
 		else
 			puts "Opção inválida! Digite 1 para sair ou 2 para continuar."
@@ -51,7 +54,8 @@ loop do
 		div=number1/number2
 		result="Dividindo #{number1} e #{number2}, tem-se #{div} \n" 
 	else
-		result='Opção inválida! \n'
+		result='Opção inválida!'
 	end
+	print result
 	system 'clear'
 end
