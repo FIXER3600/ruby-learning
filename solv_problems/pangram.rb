@@ -1,5 +1,4 @@
 $alfabeto = ('a'..'z').to_a
-$letras_faltantes = Set.new
 def pangram(word)
 	
 	word.downcase.each_char do |letter|
