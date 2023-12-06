@@ -1,4 +1,5 @@
 $alfabeto = ('a'..'z').to_a
+class Pangram
 def pangram(word)
 	
 	word.downcase.each_char do |letter|
@@ -6,5 +7,6 @@ def pangram(word)
 	end
 	return $alfabeto
 end
-
-puts pangram('The quick brown fox jumps')
+end
+p=Pangram.new
+puts p.pangram('mixer count barry flower')
