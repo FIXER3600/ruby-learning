@@ -1,3 +1,4 @@
+class Counter
 def typechar(char)
 	if char =~ /[A-Z]/
 	return 'up'
@@ -28,7 +29,14 @@ def count_characters(word)
 			numbers+=1
 		end
 		end
-	print "Caracteres maiúsculos: #{uppercase} \n Minúsculos: #{lowercase} \n Numéricos: #{numbers} \n Especiais: #{special_chars}"
+	return expected_hash = {
+		uppercase_characters: uppercase,
+		lowercase_characters: lowercase,
+		numeric_characters: numbers,
+		special_characters: special_chars
+	      }
+end
 end
 
-puts count_characters("SLFff5577@")
+counter=Counter.new
+puts counter.count_characters('SSF55@')
